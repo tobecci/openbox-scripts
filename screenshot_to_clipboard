@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file_location=/home/tobecci/Pictures/scrot/clipboard.jpg
+
+scrot -s $file_location
+xclip -selection clipboard -t image/png -i $file_location
+rm $file_location
+notify-send 'file has been copied' -i /usr/share/icons/ePapirus-Dark/16x16/actions/image-crop.svg
